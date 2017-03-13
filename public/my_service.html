@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+    <head>
+    <!-- JS Scripts -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="public/my_service.js"></script>
+     <!-- <script>
+            angular.module("MyApp", [])
+                .controller("ServiceCtrl", function($scope) {
+                    
+                $scope.num1 = 50;
+                $scope.num2 = 85;
+                console.log("comming")
+            });
+        </script> -->
+    </head>
+        <div ng-controller="ServiceCtrl">
+             <form class="" name="myForm" >
+                    <label >Num1 :</label>
+                    <input 
+                        type="text" 
+                        ng-model = "num1" 
+                        placeholder = "Enter First Number">   
+                        <br/>
+                        <br/>
+                        <label >Num2 :</label>
+                       <input 
+                        type="text" 
+                        ng-model = "num2" 
+                        placeholder = "Enter Second Number">   
+                    <button type="button" ng-click="getSum()">Add</button>
+                    <br/>
+                    <br/>
+                    Sum = {{sum}}
+                </form>
+        </div>
+    </body>
+</html>
